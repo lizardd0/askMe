@@ -1,0 +1,78 @@
+main > .container {
+    padding: 60px 15px 0;
+}
+
+@font-face {
+	font-family: 'Nashter';
+    src: url('/static/css/font/Nashter.woff') format('woff');
+}
+
+.question {
+    border: 1px solid gray;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.question-image {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+.question-title {
+    font-size: 20px;
+    font-family: opensans-bold-webfont, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.tags {
+    max-width: 100px;
+}
+
+.avatar-image {
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.username {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.settings {
+    font-family: opensans-bold-webfont, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.log-outin {
+    font-family: opensans-bold-webfont, Arial, sans-serif;
+    font-weight:bold;
+}
+
+.logo {
+    font-family: opensans-bold-webfont, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color:black;
+}
+
+.form-label {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1))
+}
