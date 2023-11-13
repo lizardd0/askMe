@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-2">
                       <!-- <svg class="icon icon---2023-10-25--014108"><use xlink:href="#icon---2023-10-25--014108"></use></svg> -->
-                        <div class="logo">AskMe</div>
+                        <a href="{% url 'index' %}" class="logo" style="text-decoration: none">AskMe</a>
                     </div>
         
                     <div class="col-6" style="margin-top: 15px;">
@@ -60,7 +60,7 @@
                             <div class="col-10" style="margin-top: 10px;">
                                 <div class="username">Mickey O'Nil</div>
 
-                                <span class="settings"><a href="" style="text-decoration: none; color: black; font-size: 20px;">Settings</a></span>
+                                <span class="settings"><a href="{% url 'settings' %}" style="text-decoration: none; color: black; font-size: 20px;">Settings</a></span>
                                 <span class="log-outin" style="margin-left: 15px;"><a href="" style="text-decoration: none; color: black; font-size: 20px;">Log out</a></span>
                             </div>
                         </div>
@@ -68,10 +68,10 @@
                         <!-- не зарегистрирован -->
                         <!-- <div class="row login-register" style="margin-left: 15px; margin-top: 15px;">
                             <div class="col-8" style="padding-left: 220px;">
-                              <span class="settings"><a href="" style="text-decoration: none; color: black; font-size: 20px;">Register</a></span>
+                              <span class="settings"><a href="{% url 'register' %}" style="text-decoration: none; color: black; font-size: 20px;">Register</a></span>
                             </div>
                             <div class="col-4" style="padding-left: 50px;">
-                              <span class="log-outin"><a href="" style="text-decoration: none; color: black; font-size: 20px;">Log in</a></span>
+                              <span class="log-outin"><a href="{% url 'login' %}" style="text-decoration: none; color: black; font-size: 20px;">Log in</a></span>
                             </div>
                         </div> -->
         
@@ -98,11 +98,14 @@
               <div class="row">
                 <h2>Popular tags</h2>
                 <div class="tags">
-                  <span class="badge bg-primary">Python</span>
+                  <!-- <span class="badge bg-primary"><a href="">Python</a></span>
                   <span class="badge bg-secondary">CSS</span>
                   <span class="badge bg-success">Swift</span>
                   <span class="badge bg-danger">JS</span>
-                  <span class="badge bg-warning">C++</span>
+                  <span class="badge bg-warning">C++</span> -->
+                  {% for tag in tags %}
+                  <span class="badge bg-primary"><a href="{% url 'tag' tag %}" style="color: aliceblue; text-decoration: none;">{{ tag }}</a></span>
+                  {% endfor %}
                 </div>
       
                 <br/>

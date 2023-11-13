@@ -1,5 +1,57 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<h1>Settings: Mickey O'Nil</h1>
+
+<div class="row g-3 align-items-center" style="margin-top: 20px;">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label" style="font-size: 18px; font-weight: bolder;">Login</label>
+    </div>
+    <div class="col-auto">
+        <input type="login" class="form-control" id="exampleFormControlInput1" placeholder="Mickey O'Nil" style="max-width: 225px; margin-left: 90px;">
+    </div>
+</div>
+
+<div class="row g-3 align-items-center" style="margin-top: 20px;">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label" style="font-size: 18px; font-weight: bolder;">Email</label>
+    </div>
+    <div class="col-auto">
+        <input type="login" class="form-control" id="exampleFormControlInput1" placeholder="heyheyhey@mail.ru" style="max-width: 225px; margin-left: 90px;">
+    </div>
+</div>
+
+<div class="row g-3 align-items-center" style="margin-top: 20px;">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label" style="font-size: 18px; font-weight: bolder;">Nickname</label>
+    </div>
+    <div class="col-auto">
+        <input type="login" class="form-control" id="exampleFormControlInput1" placeholder="mickeyy" style="max-width: 225px; margin-left: 50px;">
+    </div>
+</div>
+
+<div class="row g-3 align-items-center" style="margin-top: 20px;">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label" style="font-size: 18px; font-weight: bolder;">Upload Avatar</label>
+    </div>
+    <div class="col-auto">
+        <input class="form-control" type="file" id="formFile" style="max-width: 300px;  margin-left: 15px;">
+    </div>
+</div>
+
+<div class="row g-3 align-items-center" style="margin-top: 20px; margin-left: 130px;">
+    <div class="col-auto">
+    <img src="{% static 'img/ava.jpg' %}" alt="" style="max-width: 150px; max-height: 200px; border-radius: 10px;
+        border: 1px solid gray; margin-left: 15px;">
+        </div>
+    <div class="row-auto" style="margin-left: 15px;">
+        <button type="submit" class="btn btn-primary btn-block mb-4" style="margin-top: 20px;">
+            Save!
+          </button>
+    </div>
+</div>
+
+
 
 {% endblock %}
