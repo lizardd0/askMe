@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="row question">
+    <div class="col-3">
+      <img src="{% static '/img/pic_1.jpg' %}" alt="" class="question-image">
+      <div class="qty mt-5">
+        <input type="number" class="count" name="qty" value="1" style="max-width: 150px; border-radius: 10px;">
+      </div>
+     </div>
+    <div class="col-9">
+      <div class="question-title"><a href="{% url 'question' question_id=question.id %}">{{ question.title }}</a></div>
+      <div class="question-text">{{ question.content }}</div>
+        <div class="row answers">
+          <div class="col-6">
+            <button type="button" class="btn btn-primary">
+              Answers <span class="badge text-bg-secondary">4</span>
+            </button>
+          </div>
+          <div class="col-6">
+            <div class="tags-question" style="margin-top: 10px;">
+              <span class="first tag>" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold;">Tags:</span>
+              <span class="first tag>"><a href="">first tag</a></span>
+              <span class="first tag>"><a href="">second tag</a></span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

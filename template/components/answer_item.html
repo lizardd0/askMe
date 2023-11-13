@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="row question">
+    <div class="col-3">
+      <img src="{% static '/img/pic_1.jpg' %}" alt="" class="question-image">
+      <div class="qty mt-5">
+        <input type="number" class="count" name="qty" value="1" style="max-width: 150px; border-radius: 10px;">
+      </div>
+     </div>
+    <div class="col-9">
+      <div class="question-text">{{ answer.content }}</div>
+      <div class="row answers" style="margin-top: 15px; margin-left: 5px; font-weight: bolder;">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckChecked">
+              Correct!
+            </label>
+          </div>
+        </div>
+    </div>
+  </div>
