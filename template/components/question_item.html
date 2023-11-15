@@ -2,25 +2,29 @@
 
 <div class="row question">
     <div class="col-3">
-      <img src="{% static '/img/pic_1.jpg' %}" alt="" class="question-image">
+      <img src="{{ question.profile_id.avatar.url }}" alt="" class="question-image">
+      <h5>{{ question.profile_id }}</h5>
       <div class="qty mt-5">
-        <input type="number" class="count" name="qty" value="1" style="max-width: 150px; border-radius: 10px;">
+        {% include 'components/like_dislike.html' %}
       </div>
      </div>
     <div class="col-9">
       <div class="question-title"><a href="{% url 'question' question_id=question.id %}">{{ question.title }}</a></div>
-      <div class="question-text">{{ question.content }}</div>
-        <div class="row answers">
+      <div class="question-text">{{ question.text }}</div>
+        <div class="row answers" style="margin-top: 20px;">
           <div class="col-6">
             <button type="button" class="btn btn-primary">
-              Answers <span class="badge text-bg-secondary">4</span>
+              <a href="{% url 'question' question_id=question.id %}" style="color: aliceblue; text-decoration: none;">Answers</a> <span class="badge text-bg-secondary">{{ question.number_of_answers }}</span>
             </button>
           </div>
           <div class="col-6">
             <div class="tags-question" style="margin-top: 10px;">
               <span class="first tag>" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold;">Tags:</span>
-              <span class="first tag>"><a href="">first tag</a></span>
-              <span class="first tag>"><a href="">second tag</a></span>
+              <!-- <span class="first tag>"><a href="">first tag</a></span>
+              <span class="first tag>"><a href="">second tag</a></span> -->
+              {% for tag in question.tags.all %}
+              <a href="{% url 'tag' tag %}"> {{ tag }}</a>
+              {% endfor %}
             </div>
           </div>
         </div>

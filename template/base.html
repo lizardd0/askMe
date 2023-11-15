@@ -98,11 +98,6 @@
               <div class="row">
                 <h2>Popular tags</h2>
                 <div class="tags">
-                  <!-- <span class="badge bg-primary"><a href="">Python</a></span>
-                  <span class="badge bg-secondary">CSS</span>
-                  <span class="badge bg-success">Swift</span>
-                  <span class="badge bg-danger">JS</span>
-                  <span class="badge bg-warning">C++</span> -->
                   {% for tag in tags %}
                   <span class="badge bg-primary"><a href="{% url 'tag' tag %}" style="color: aliceblue; text-decoration: none;">{{ tag }}</a></span>
                   {% endfor %}

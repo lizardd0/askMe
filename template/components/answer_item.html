@@ -2,13 +2,16 @@
 
 <div class="row question">
     <div class="col-3">
-      <img src="{% static '/img/pic_1.jpg' %}" alt="" class="question-image">
+      <img src="{{ answer.profile_id.avatar.url }}" alt="" class="question-image">
+      <h5>{{ answer.profile_id }}</h5>
       <div class="qty mt-5">
-        <input type="number" class="count" name="qty" value="1" style="max-width: 150px; border-radius: 10px;">
+        <!-- {% include 'components/like_dislike.html' %} -->
+        <input type="number" class="count" name="qty" value="{{ answer.likes }}" style="max-width: 150px; border-radius: 10px; border-color: green;">
+<input type="number" class="count" name="qty" value="{{ answer.dislikes }}" style="max-width: 150px; border-radius: 10px; margin-top: 10px; border-color: crimson;">
       </div>
      </div>
     <div class="col-9">
-      <div class="question-text">{{ answer.content }}</div>
+      <div class="question-text">{{ answer.text }}</div>
       <div class="row answers" style="margin-top: 15px; margin-left: 5px; font-weight: bolder;">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
